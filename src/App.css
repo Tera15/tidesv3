@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+
+
+html {
+ background: rgb(240, 128, 128);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.App{
+  height: 100vh;
+  width: 100vw;
+  
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+.tideData {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 550px 0 0 0;
+  
+  
+ 
+
+}
+
+.cardGroup{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  justify-items: center;
+}
+#card{
   color: white;
+  background: #0099ff;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width:400px) {
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
