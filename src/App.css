@@ -42,10 +42,21 @@ html {
 
 @media only screen and (max-width:400px) {
   .tideData {
+    margin: 500px 0 0 0;
+  }
+}
+
+@media only screen and (max-width:330px) {
+  .tideData {
     margin: 350px 0 0 0;
   }
 }
 
+@media only screen and (min-width:900px) and (max-width:1100px) {
+  .tideData {
+    margin: 675px 0 0 0;
+  }
+}
 
 
 
