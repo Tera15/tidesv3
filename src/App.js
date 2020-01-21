@@ -148,12 +148,12 @@ class App extends Component {
     <div className='App'>
         <Header />
   
-        <div className="mapContainer">
+        {/* <div className="mapContainer"> */}
    
         <MapContainer
             getLongLat={this.getLongLat}
           />
-        </div>
+        {/* </div> */}
      
         
         <div className="tideData">
@@ -161,7 +161,8 @@ class App extends Component {
            
         <DataDisplay
             info={this.state.info}
-            placeHolderData={this.state.placeHolderData}
+            lat={this.state.lat}
+            lng={this.state.lng}
           />
            <p className="tc white fw4 ttu">not for navigational purposes</p>
         </div>  

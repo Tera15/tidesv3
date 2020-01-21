@@ -5,7 +5,7 @@
 import React from 'react';
 import Data from './Data'
 
-const DataDisplay = ({info, placeHolderData}) => {
+const DataDisplay = ({info, lng,lat}) => {
 
     const formatDate = (time) => {
         let timeArr = time.split('')
@@ -19,6 +19,10 @@ const DataDisplay = ({info, placeHolderData}) => {
        
   
     return (
+        <div>
+            <h3 className="tc white">Coordinates</h3>
+           <p className="tc white">{lat}, {lng}</p>
+            
         <div className="cardGroup">
             {
             
@@ -30,7 +34,6 @@ const DataDisplay = ({info, placeHolderData}) => {
                         <Data
                          height={data.height.toFixed(2)}
                          time={time}
-                        // name={data.name} for testing purposes with placeholder
                         />
            
           </div>
@@ -38,7 +41,7 @@ const DataDisplay = ({info, placeHolderData}) => {
                 })
             }
                         
-          
+            </div>
         </div>
     );
       

@@ -29,7 +29,7 @@ export class MapContainer extends Component {
     return (
         
            
-      <div>
+     
 <Map 
       google={this.props.google} 
       zoom={6}
@@ -45,8 +45,8 @@ export class MapContainer extends Component {
 
                 
     
-      
-       </div>
+   
+     
     );
     
   }
@@ -54,5 +54,5 @@ export class MapContainer extends Component {
  
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCJRRiy1b_l1uT3SldWosUADac-qmXs_0Q')
-})(MapContainer)
+})(MapContainer) 
 
