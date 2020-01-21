@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Components/Header/Header';
 import DataDisplay from './Components/DataDisplay/DataDisplay';
 import MapContainer from './Components/MapContainer/MapContainer';
-import PlaceHolder from './PlaceHolder'; 
 import wave from './wave.svg';
 
 import 'tachyons';
@@ -16,8 +15,7 @@ class App extends Component {
       info: [],
       lat: '54.3150',
       lng: '130.3208',
-      route: 'Landing',
-      placeHolderData: []
+     
       
 
     }
