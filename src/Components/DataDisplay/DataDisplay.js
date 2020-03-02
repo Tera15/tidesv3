@@ -10,7 +10,7 @@ const DataDisplay = ({info, lng,lat}) => {
     const formatDate = (time) => {
         let timeArr = time.split('')
         let i = 0;
-        for (i = 0; i<=15; i++) {
+        for (i = 0; i <= 15; i++) {
             timeArr.pop()
         }
         return timeArr.join('').replace('T', "  : ")

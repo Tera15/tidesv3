@@ -38,14 +38,19 @@ class App extends Component {
       const lng = this.state.lng
       const today = new Date();
       let dd = today.getDate();
-      let mm = today.getMonth();
+      let tmrw = today.getDate() + 1;
+      let mm = today.getMonth() +1;
       let yyyy = today.getFullYear();
       if (dd < 10) {
-        let dd = 0 + dd;
+        dd = '0' + dd;
+      }
+
+      if (tmrw < 10) {
+        tmrw = '0' + tmrw;
       }
 
       if (mm < 10) {
-        mm = 0 + mm
+        mm = '0' + mm
       }
 
       if(mm === 0) {
@@ -53,7 +58,7 @@ class App extends Component {
       }
        // possibly add date selector dropdown for future dates?????? also for location.(geolocation api google so can enter townNames)
       const todaysDate = yyyy + '-' + mm + `-` + dd;
-      const tomorrowsDate = yyyy + '-' + mm + `-` + (dd + 1);
+      const tomorrowsDate = yyyy + '-' + mm + `-` + (tmrw);
 
       fetch(`https://api.stormglass.io/v1/tide/extremes/point?lat=${lat}&lng=${lng}&start=${todaysDate}&end=${tomorrowsDate}`, {
         headers: {
@@ -69,12 +74,12 @@ class App extends Component {
 
 
 
-            fetch ('https://jsonplaceholder.typicode.com/comments')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({placeHolderData: data})
-        console.log(data)
-      })
+      //       fetch ('https://jsonplaceholder.typicode.com/comments')
+      // .then(response => response.json())
+      // .then(data => {
+      //   this.setState({placeHolderData: data})
+      //   console.log(data)
+      // })
     }
 
 
@@ -94,26 +99,31 @@ class App extends Component {
     const lng = this.state.lng
     const today = new Date();
     let dd = today.getDate();
-    let mm = today.getMonth();
+    let tmrw = today.getDate() + 1;
+    let mm = today.getMonth() + 1;
     let yyyy = today.getFullYear();
     if (dd < 10) {
-      let dd = 0 + dd;
+       dd = '0' + dd;
+    }
+
+    if (tmrw < 10) {
+      tmrw = '0' + tmrw;
     }
 
     if (mm < 10) {
-      mm = 0 + mm
+      mm = '0' + mm
     }
 
     if(mm === 0) {
-      mm = '0'+1;
-    }
+      mm = '0' + 1;
+    } 
 
 
 
 
     const todaysDate = yyyy + '-' + mm + `-` + dd;
-    const tomorrowsDate = yyyy + '-' + mm + `-` + (dd + 1);
-    console.log(tomorrowsDate);
+    const tomorrowsDate = yyyy + '-' + mm + `-` + tmrw;
+    console.log(tomorrowsDate, 'the date');
 
 
     fetch(`https://api.stormglass.io/v1/tide/extremes/point?lat=${lat}&lng=${lng}&start=${todaysDate}&end=${tomorrowsDate}`, {
@@ -148,12 +158,12 @@ class App extends Component {
     <div className='App'>
         <Header />
   
-        {/* <div className="mapContainer"> */}
+
    
         <MapContainer
             getLongLat={this.getLongLat}
           />
-        {/* </div> */}
+       
      
         
         <div className="tideData">

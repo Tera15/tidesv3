@@ -20,8 +20,8 @@ export class MapContainer extends Component {
     
     render() {
         const style = {
-          width: '50vw',
-          height:'50vh',
+          width: '50%',
+          height:'40%',
           margin: "2% 0 0 25%",
           
             
