@@ -62,7 +62,7 @@ class App extends Component {
 
       fetch(`https://api.stormglass.io/v1/tide/extremes/point?lat=${lat}&lng=${lng}&start=${todaysDate}&end=${tomorrowsDate}`, {
         headers: {
-          'Authorization': 'd91ae818-bf10-11e9-81a5-0242ac130004-d91ae926-bf10-11e9-81a5-0242ac130004'
+          'Authorization': ''
         }
       }).then((response) => response.json()).then((tideData) => {
         const extremes = tideData.extremes
@@ -128,7 +128,7 @@ class App extends Component {
 
     fetch(`https://api.stormglass.io/v1/tide/extremes/point?lat=${lat}&lng=${lng}&start=${todaysDate}&end=${tomorrowsDate}`, {
       headers: {
-        'Authorization': 'd91ae818-bf10-11e9-81a5-0242ac130004-d91ae926-bf10-11e9-81a5-0242ac130004'
+        'Authorization': ''
       }
     }).then((response) => response.json()).then((tideData) => {
       const extremes = tideData.extremes
